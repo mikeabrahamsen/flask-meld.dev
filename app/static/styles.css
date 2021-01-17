@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+
+.btn {
+  @apply py-4 px-6 font-semibold;
+}
+.btn-purple {
+    @apply bg-purple-900 text-gray-100 rounded;
+}
+.btn-purple-inline {
+    @apply bg-purple-900 text-gray-100 rounded-r;
+}
+.btn-purple-full {
+    @apply bg-purple-900 text-gray-100 rounded-full;
+}
+
+.btn-green-full {
+    @apply bg-green-600 text-white rounded-full font-semibold;
+}
+.btn-red-full{
+    @apply bg-red-500 text-white rounded-full font-semibold;
+}
+.btn-green-full:hover{
+  @apply bg-green-600 cursor-pointer text-purple-100;
+}
+.btn-secondary-inline {
+    @apply bg-gray-900 text-gray-100 rounded-r;
+}
+.btn-purple:hover, .btn-purple-inline:hover, .btn-purple-full:hover{
+  @apply bg-purple-700 cursor-pointer;
+}
+.btn-secondary-inline:hover {
+    @apply bg-purple-900 text-gray-100 rounded-r;
+}
+
+@tailwind utilities;
+
+.image-grayscale {
+    filter: grayscale(100%);
+}
