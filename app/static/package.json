@@ -1,0 +1,18 @@
+{
+  "name": "flask-meld.dev",
+  "version": "1.0.0",
+  "main": "application.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build:css": "postcss styles.css -o tailwind.css",
+    "depcheck": "depcheck",
+    "watch": "postcss styles.css --watch -o tailwind.css"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.3",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1"
+  },
+  "devDependencies": {}
+}
