@@ -39,7 +39,7 @@
         <h3 class="text-2xl py-6 text-center">Okay, that's great. How much code do I have to write to build that?</h3>
         <p class="pb-2">The bulk of the logic is in the component class, it's really simple!</p>
         <div class="p-6 bg-black text-white rounded-lg text-sm">
-            <p class="text-right text-sm text-red-800">meld/components/search.py</p>
+            <p class="text-right text-sm text-purple-800">meld/components/search.py</p>
         {% markdown %}
         ```python
         from flask_meld import Component
@@ -54,7 +54,7 @@
                 return User.query.filter(User.name.contains(self.search)).all()
         ```
         {% endmarkdown %}
-        <p class="border-t border-purple-800 pt-4 mt-8 text-right text-sm text-red-800">meld/components/search.py</p>
+        <p class="border-t border-purple-800 pt-4 mt-8 text-right text-sm text-purple-800">meld/components/search.py</p>
         {% markdown %}
         ```html
         {% raw %}
@@ -75,7 +75,7 @@
         {% endmarkdown %}
         </div>
 
-        <p class="mb-8">
+        <p class="my-8">
         Meld utilizes WebSockets and morphdom to create server-rendered HTML and swap out DOM elements without refreshing the page.
         </p>
 
