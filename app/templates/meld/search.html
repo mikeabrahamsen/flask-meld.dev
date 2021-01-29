@@ -1,13 +1,12 @@
-<div>
-    <div class="my-4">
-        <form meld:submit.prevent="submit">
-            <input meld:model="search" 
-                   type="text" name="name" id="name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md p-2" placeholder="Search for name">
-        </form>
+<div class="bg-gray-200 rounded pb-4">
+    <div class="p-4">
+    <h1 class="pb-4 text-center text-2xl text-gray-900">Search for a user in a database</h1>
+        <input meld:model="search" 
+               type="text" name="name" id="name" class="w-1/2 p-2 mb-4 shadow-lg justify-center inline-block sm:text-sm border-gray-300 rounded-md" placeholder="Search for name">
+    <p class="text-gray-900 text-sm font-light">Search matches <span class="underline">{{users|length}}</span> users</p>
     </div>
 
-    {% if users %}
-    <div class="overflow-auto max-h-screen">
+    <div class="overflow-auto max-h-72 px-4">
     <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
     {% for user in users %}
     <li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
@@ -18,5 +17,4 @@
     {% endfor %}
     </ul>
     </div>
-    {% endif %}
 </div>
