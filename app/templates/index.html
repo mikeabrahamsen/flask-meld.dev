@@ -38,7 +38,7 @@
         
         <h3 class="text-2xl py-6 text-center">Okay, that's great. How much code do I have to write to build that?</h3>
         <p class="pb-2">The bulk of the logic is in the component class, it's really simple!</p>
-        <div class="p-6 bg-black text-white rounded-lg">
+        <div class="p-6 bg-black text-white rounded-lg text-sm">
             <p class="text-right text-sm text-red-800">meld/components/search.py</p>
         {% markdown %}
         ```python
@@ -52,6 +52,25 @@
             @property
             def users(self):
                 return User.query.filter(User.name.contains(self.search)).all()
+        ```
+        {% endmarkdown %}
+        <p class="border-t border-purple-800 pt-4 mt-8 text-right text-sm text-red-800">meld/components/search.py</p>
+        {% markdown %}
+        ```html
+        {% raw %}
+        <div>
+            <h1>Search for a user in a database</h1>
+            <input meld:model="search" type="text" placeholder="Search for name">
+            <p>Search matches <span class="underline">{{users|length}}</span> users</p>
+            <ul class="grid">
+                {% for user in users %}
+                    <li class="card">
+                        <h3>{{ user.name }}</h3>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endraw %}
         ```
         {% endmarkdown %}
         </div>
