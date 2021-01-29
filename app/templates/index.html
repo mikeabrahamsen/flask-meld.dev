@@ -4,13 +4,10 @@
 <div class="flex justify-center">
     <div class="max-w-3xl">
         <h1 class="text-purple-900 text-2xl sm:text-3xl mt-8">
-            Flask-Meld: A full-stack framework that enables dynamic frontends
-            using Python and the Jinja2 templating engine. 
+            Supercharge your workflow with Flask-Meld. Create dynamic web interfaces
+            with pure Python.
         </h1>
         <div class="text-xl">
-            <p class="my-4">
-            Meld is a passion project. I want to show how it works and how it can help you create dynamic web interfaces in pure Python.
-            </p>
             <ul class="text-gray-600 my-4">
                 <li>- Less context switching.</li>
                 <li>- No need to write JavaScript.</li>
@@ -81,6 +78,68 @@
                 </div>
             </div>
         </div>
+
+        {% meld 'search' %}
+
+
+            <link rel="stylesheet" href="https://emailoctopus.com/bundles/emailoctopuslist/css/1.6/form.css" >
+            <div class="emailoctopus-form-wrapper emailoctopus-form-default emailoctopus-form-wrapper-medium"
+                 style="font-family: Verdana, Geneva, sans-serif; color: rgb(26, 26, 26);">
+                <h3 class="mb-4 text-xl">
+                    The best way to stay up to date is to drop your email below.
+                    When something worth noting comes along, I'll send you an email. I won't spam you and 
+                    it's easy to unsubscribe at any time.
+                </h3>
+            <p class="emailoctopus-success-message">
+            </p>
+            <p class="emailoctopus-error-message">
+            </p>
+            <form action="https://emailoctopus.com/lists/72c658b3-4fc5-11eb-a3d0-06b4694bee2a/members/embedded/1.3s/add"
+                  method="post"
+                  data-message-success="Thank you for subscribing!"
+                  data-message-missing-email-address="Your email address is required."
+                  data-message-invalid-email-address="Your email address looks incorrect, please try again."
+                  data-message-bot-submission-error="This doesn't look like a human submission."
+                  data-message-consent-required="Please check the checkbox to indicate your consent."
+                  data-message-invalid-parameters-error="This form has missing or invalid fields."
+                  data-message-unknown-error="Sorry, an unknown error has occurred. Please try again later."
+                  class="emailoctopus-form flex justify-center items-center"
+                  data-sitekey="6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6"
+                  >
+                  <div class="emailoctopus-form-row">
+                      <label for="field_0">
+                          Email address
+                      </label>
+                <input id="field_0"
+                       name="field_0"
+                       type="email"
+                       placeholder
+                       required="required"
+                       >
+                  </div>
+                <div aria-hidden="true" class="emailoctopus-form-row-hp">
+                    <input type="text"
+                           name="hpc4b27b6e-eb38-11e9-be00-06b4694bee2a"
+                           tabindex="-1"
+                           autocomplete="nope">
+                </div>
+                <div class="p-4">
+                    <input type="hidden" name="successRedirectUrl">
+                    <button type="submit" class="bg-purple-800 text-white p-2 rounded font-bold"
+                                          style="">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+                <div class="flex justify-center emailoctopus-rewards">
+                    <span>Powered by 
+                    <a class="underline" href="https://emailoctopus.com/?urli=DdRqt&amp;utm_medium=user_referral&amp;utm_source=builder"
+                                        target="_blank">
+                        EmailOctopus
+                    </a>
+                    </span>
+                </div>
+            </div>
     </div>
 </div>
 <script src="https://emailoctopus.com/bundles/emailoctopuslist/js/1.6/form-recaptcha.js">
