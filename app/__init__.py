@@ -8,7 +8,7 @@ from app import models
 meld = Meld()
 
 
-def create_app(config_name='development'):
+def create_app(config_name="development"):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
     db.init_app(app)
@@ -19,7 +19,9 @@ def create_app(config_name='development'):
         db.create_all()
         seed_database(models.User)
 
-    @app.route('/')
+    app.jinja_env.add_extension("jinja_markdown.MarkdownExtension")
+
+    @app.route("/")
     def index():
         return render_template("index.html")
 
