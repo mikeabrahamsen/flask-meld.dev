@@ -7,5 +7,5 @@ class Search(Component):
 
     @property
     def users(self):
-        users = User.query.filter(User.username.contains(self.search)).all()
+        users = User.query.filter(User.name.contains(self.search)).all()
         return users
