@@ -22,43 +22,47 @@
         <h3 class="text-3xl pt-12 mb-6">See it in action with a <span class="underline">real</span> example!</h3>
         {% meld 'search' %}
         
-        <h3 class="text-2xl py-6 text-center">Okay, that's great. How much code do I have to write to build that?</h3>
+        <h3 class="text-2xl pt-6 text-center">Okay, that's great. How much code do I have to write to build that?</h3>
+        <h3 class="text-2xl pb-6 text-center">Most importantly, it takes exactly <span class="underline">zero lines of JavaScript!</span></h3>
         <p class="pb-2">Meld components define the data attributes and functions that the template will use.</p>
-        <div class="p-6 bg-black text-white rounded-lg text-sm">
+        <div class="rounded-lg text-sm">
+            <pre class="m-0 language-python">
             <p class="text-right text-sm text-purple-500">meld/components/search.py</p>
-        {% markdown %}
-        ```python
-        from flask_meld import Component
-        from app.models import User
+            <code>
+                from flask_meld import Component
+                from app.models import User
 
+                class Search(Component):
+                    search = ""
 
-        class Search(Component):
-            search = ""
-
-            @property
-            def users(self):
-                return User.query.filter(User.name.contains(self.search)).all()
-        ```
-        {% endmarkdown %}
-        <p class="border-t border-purple-800 pt-4 mt-8 text-right text-sm text-purple-500">meld/components/search.py</p>
-        {% markdown %}
-        ```html
-        {% raw %}
-        <div>
-            <h1>Search for a user in a database</h1>
-            <input meld:model="search" type="text" placeholder="Search for name">
-            <p>Search matches <span class="underline">{{users|length}}</span> users</p>
-            <ul class="grid">
-                {% for user in users %}
+                    @property
+                    def users(self):
+                        return User.query.filter(User.name.contains(self.search)).all()
+            </code>
+            </pre>
+            <pre class="m-0 language-html">
+            <p class="border-purple-800 text-right text-sm text-purple-500">templates/meld/search.html</p>
+            <code>
+            {% markdown %}
+            {% raw %}
+            ```
+            <div>
+                <h1>Search for a user in a database</h1>
+                <input meld:model="search" type="text" placeholder="Search for name">
+                <p>Search matches <span class="underline">{{users|length}}</span> users</p>
+                <ul class="grid">
+                    {% for user in users %}
                     <li class="card">
                         <h3>{{ user.name }}</h3>
                     </li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endraw %}
-        ```
-        {% endmarkdown %}
+                    {% endfor %}
+                </ul>
+            </div>
+            ```
+            {% endraw %}
+            {% endmarkdown %}
+            </code>
+            </pre>
         </div>
 
         <div class="my-8 p-8 justify-center bg-gray-100 rounded-lg shadow-md border">

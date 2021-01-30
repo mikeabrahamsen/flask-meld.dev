@@ -33,6 +33,7 @@
     @apply bg-purple-900 text-gray-100 rounded-r;
 }
 
+
 @tailwind utilities;
 
 .image-grayscale {
