@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="flex justify-center mt-8">
+    <div class="text-center">
+    <h1 class="text-3xl">Docs are coming soon!</h1> 
+    <p>Check out the <a href="https://github.com/mikeabrahamsen/Flask-Meld/blob/main/README.md">
+        README on Github</a> to get started right now</p>
+    </div>
+</div>
+<div class="my-8 p-8 justify-center bg-gray-100 rounded-lg shadow-md border">
+    <div class="text-xl text-center pb-4">
+        <h3>
+            The best way to stay up to date is to drop your email below.
+        </h3>
+        <h3>
+            When the documentation is read, I'll let you know.
+        </h3>
+    </div>
+    {% include 'email-signup.html' %}
+    <p class="text-center text-sm">No spam.  Easily unsubscribe at any time.</p>
+</div>
+{% endblock %}

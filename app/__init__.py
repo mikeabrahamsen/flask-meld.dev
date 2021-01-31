@@ -25,4 +25,8 @@ def create_app(config_name="development"):
     def index():
         return render_template("index.html")
 
+    @app.route("/doc")
+    def docs():
+        return render_template("documentation.html")
+
     return app
