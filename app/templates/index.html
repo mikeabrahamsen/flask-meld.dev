@@ -43,24 +43,7 @@
             <pre class="m-0 language-html">
             <p class="border-purple-800 text-right text-sm text-purple-500">templates/meld/search.html</p>
             <code>
-            {% markdown %}
-            {% raw %}
-            ```
-            <div>
-                <h1>Search for a user in a database</h1>
-                <input meld:model="search" type="text" placeholder="Search for name">
-                <p>Search matches <span class="underline">{{users|length}}</span> users</p>
-                <ul class="grid">
-                    {% for user in users %}
-                    <li class="card">
-                        <h3>{{ user.name }}</h3>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            ```
-            {% endraw %}
-            {% endmarkdown %}
+            {{data}}
             </code>
             </pre>
         </div>

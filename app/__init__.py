@@ -1,8 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, escape
 from config import config
 from flask_meld import Meld
 from .db import db, seed_database
 from app import models
+from jinja2 import Markup
 
 # extensions
 meld = Meld()
@@ -23,7 +24,9 @@ def create_app(config_name="development"):
 
     @app.route("/")
     def index():
-        return render_template("index.html")
+        data = escape(render_template("search-example-markup.html"))
+
+        return render_template("index.html", data=data)
 
     @app.route("/doc")
     def docs():
