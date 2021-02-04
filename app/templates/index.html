@@ -19,7 +19,7 @@
             </ul>
         </div>
 
-        <h3 class="text-3xl pt-12 mb-6">See it in action with a <span class="underline">real</span> example!</h3>
+        <h3 class="text-2xl pt-12 mb-6">See it in action with a <span class="underline">real</span> example!</h3>
         {% meld 'search' %}
         
         <div class="text-2xl py-6 text-center">
@@ -55,14 +55,24 @@
 
         <div class="my-8 p-8 justify-center bg-gray-100 rounded-lg shadow-md border">
             <div class="text-xl text-center mb-6">
-            <h3 class="leading-loose">You made it this far, you might enjoy the mailing list.</h3>
+            <h3 class="leading-loose">Stay up to date!</h3>
             <h3 class="text-lg">
-                <span class="underline">Once or twice a month</span> you will receive a tip
-                showing you how Meld can help solve a problem in your Python project!
+                Once or twice a <span class="underline">month </span> receive a project update.
+            <h3 class="text-lg">
+                Let us show you how Meld can help solve a problem in your Python project! 
+            </h3>
             </h3>
             </div>
         {% include 'email-signup.html' %}
         <p class="text-center text-sm">No spam.  Easily unsubscribe at any time.</p>
+        </div>
+        <div class="text-purple-900 text-2xl text-center mt-8 mb-4">
+            How it works
+        </div>
+        <div class="text-lg text-center">
+            Meld utilizes server-rendered templates and <a href="https://github.com/patrick-steele-idem/morphdom">morphdom</a>. When the client makes a change, the update is pushed to 
+            the server where a new template is generated and sent back to the client. Then, morphdom intelligently updates the DOM.
+            It's pretty neat!
         </div>
     </div>
 </div>
