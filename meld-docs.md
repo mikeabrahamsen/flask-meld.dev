@@ -57,10 +57,10 @@ class Counter(Component):
         self.count = int(self.count) - 1
 
 ```
+The class above creates a property named `count` and defines the `add` and
+`subtract` functions which will modify the `count` property.  Combining the use of 
+properties and functions in this way allows you to customize the behavior of your components.
 
-The code above creates a property named `count` and uses two functions, `add` and
-`subtract` to modify the `count` property. Combining the use of properties and functions
-in this way allows you to customize the behavior of your components.
 
 ```html
 <!-- templates/meld/counter.html -->
@@ -73,4 +73,19 @@ in this way allows you to customize the behavior of your components.
 
 The template includes two buttons and an input field. The buttons bind to the functions
 using `meld:click="add"` and `meld:click:"subtract"` while the input binds to the
-`count` property with `meld:model="count"`
+`count` property with `meld:model="count"`. 
+
+Let's dive more in depth into properties and functions and how they are used to build
+custom behavior into components.
+
+# Properties
+
+Components store model data for the class using `properties`. 
+
+```
+class Counter(Component):
+    count = 0
+```
+
+This `Counter` component has a `count` property that can be updated.
+
