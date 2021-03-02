@@ -1,6 +1,6 @@
 # Introduction:
-Meld is a full-stack, reactive, Flask web framework. The DOM automatically 
-updates as a user interacts with the page.
+Meld is a full-stack, reactive, web framework built on Flask. Meld gives you tools to
+dynamic frontend experiences without the need to write any Javascript.
 
 Instead of syncing data between the client and the server via HTTP requests,
 Meld uses a persistent WebSocket connection. When data is updated on the
@@ -35,6 +35,7 @@ Meld can be added to an existing application by completing the following steps:
 specify a port and debugging use `socketio.run(app=app, port=5000, debug=True)`
 
 # Building Applications With Meld
+
 ## Components
 
 Components consist of a Python class and a Jinja template that together, enable
@@ -144,7 +145,7 @@ Flask-WTF to give you real-time form validation without writing any Javascript.
 
 ### Use WTForms for validation
 
-Define your form with Flask-WTF just as you always do. 
+Define your form with Flask-WTF
 
 ```py
 # forms.py
@@ -229,7 +230,7 @@ class Register(Component):
 
 ### Your routes can stay the same when using real-time validation
 
-You have options here, you can create a custom method on your component to handle
+You can create a custom method on your component (such as a `save` method) to handle
 submissions or you can use your regular old Flask routes. 
 
 ```py
