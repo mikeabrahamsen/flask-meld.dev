@@ -44,7 +44,7 @@ The best way to start to understand how components work is to look at an example
 ```py
 # app/meld/components/counter.py
 
-from flask_meld.component import Component
+from flask_meld import Component
 
 
 class Counter(Component):
@@ -74,3 +74,21 @@ in this way allows you to customize the behavior of your components.
 The template includes two buttons and an input field. The buttons bind to the functions
 using `meld:click="add"` and `meld:click:"subtract"` while the input binds to the
 `count` property with `meld:model="count"`
+
+
+### Templates
+
+You can pass arguments to a component from a template with the following syntax:
+
+```
+{% meld "search", site_id=site.id %}
+```
+
+Use the arguments within your component by referencing `self` in your functions.
+
+```
+class Search(Component):
+
+    def search(self):
+        site_id = self.site_id
+```
