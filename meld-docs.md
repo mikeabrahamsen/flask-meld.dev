@@ -1,5 +1,5 @@
 # Introduction:
-Meld is a full-stack, reactive, web framework built on Flask. Meld gives you tools to
+Meld is a full-stack, reactive, web framework for Flask. Meld gives you tools to
 dynamic frontend experiences without the need to write any Javascript.
 
 Instead of syncing data between the client and the server via HTTP requests,
